@@ -11,7 +11,7 @@ VIDEO_ANON = "videos/anonymized_demo.mp4"
 OUTPUT_VIDEO_DIR = "videos/compressed"
 OUTPUT_CSV_DIR = "csv"
 
-MODEL = "mediapipe"   # "mediapipe" or "rtmw"
+MODEL = "rtmw"   # "mediapipe" or "rtmw"
 SIDE = "right"
 SHOW = "n"
 
@@ -35,6 +35,7 @@ if MODEL == "mediapipe":
 	EXTRACT_SCRIPT = "scripts/extract_mediapipe.py"
 elif MODEL == "rtmw":
 	EXTRACT_SCRIPT = "scripts/extract_rtmw.py"
+	BITRATES = [200] # pour le rtmw on ne regarde que la compression faible
 else:
 	raise ValueError("Unknown model")
 
