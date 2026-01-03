@@ -1,0 +1,7 @@
+.venv/
+
+csv/*
+!csv/reference.csv
+
+videos/compressed/*
+results
